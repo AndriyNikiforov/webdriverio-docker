@@ -27,8 +27,6 @@ RUN apk update && apk add --no-cache bash \
         xvfb \
         zlib-dev \
         chromium \
-        chromium-chromedriver
-
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-RUN export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-RUN nmv install lts
+        chromium-chromedriver \
+        nodejs \
+        npm
