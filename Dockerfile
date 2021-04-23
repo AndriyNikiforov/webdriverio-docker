@@ -29,4 +29,5 @@ RUN apk update && apk add --no-cache bash \
         chromium \
         chromium-chromedriver \
         nodejs \
-        npm
+        npm \
+        git
