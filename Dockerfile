@@ -34,7 +34,7 @@ RUN apk update && apk add --no-cache bash \
         unzip \
         wget 
 
-RUN wget -N http://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip
+RUN wget -N http://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
 RUN unzip ./chromedriver_linux64.zip
 RUN mv -f ./chromedriver /usr/local/share/
 RUN chmod +x /usr/local/share/chromedriver
