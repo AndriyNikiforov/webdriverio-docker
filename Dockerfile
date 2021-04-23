@@ -39,4 +39,3 @@ RUN unzip ./chromedriver_linux64.zip
 RUN mv -f ./chromedriver /usr/local/share/
 RUN chmod +x /usr/local/share/chromedriver
 RUN ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-RUN ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
