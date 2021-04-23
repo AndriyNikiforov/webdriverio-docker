@@ -31,7 +31,8 @@ RUN apk update && apk add --no-cache bash \
         nodejs \
         npm \
         git \
-        unzip 
+        unzip \
+        wget 
 
 RUN wget -N http://chromedriver.storage.googleapis.com/91.0.4472.19/chromedriver_linux64.zip
 RUN unzip ./chromedriver_linux64.zip
