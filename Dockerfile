@@ -5,7 +5,6 @@ RUN echo "deb http://deb.debian.org/debian/ unstable main contrib non-free" >> /
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends firefox \
     ffmpeg \
-    imagemagic \
-    xwd 
-
+    imagemagic 
+    
 RUN npm install -g @wdio/cli
