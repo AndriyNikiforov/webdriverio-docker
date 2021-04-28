@@ -6,6 +6,10 @@ RUN apt-get update
 RUN apt-get install -y --no-install-recommends firefox \
     ffmpeg \
     imagemagick \
-    libxvidcore4
+    libxvidcore4 \
+    ufw
 
 RUN npm install -g @wdio/cli
+RUN ufw allow 9000
+
+EXPOSE 9000
