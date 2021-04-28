@@ -7,7 +7,8 @@ RUN apt-get install -y --no-install-recommends firefox \
     ffmpeg \
     imagemagick \
     libxvidcore4 \
-    ufw
+    ufw \
+    psmisc
 
 RUN npm install -g @wdio/cli
 RUN ufw allow 9000
