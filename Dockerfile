@@ -1,17 +1,8 @@
-FROM ianwalter/puppeteer
+FROM blueimp/wdio
 
-RUN echo "deb http://deb.debian.org/debian/ unstable main contrib non-free" >> /etc/apt/sources.list.d/debian.list
-
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends firefox \
-    ffmpeg \
-    imagemagick \
-    libxvidcore4 \
-    ufw \
-    psmisc \
-    lsof
-
+RUN apk update 
+RUN apkt --no-cache add chromium \
+    firefox-esr
+    
 RUN npm install -g @wdio/cli
-RUN ufw allow 9000
 
-EXPOSE 9000
