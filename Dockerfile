@@ -1,11 +1,17 @@
-FROM blueimp/wdio
+FROM alpine:3.12
 
-USER root
-
-RUN apk update 
-RUN apk --no-cache add chromium \
-    firefox-esr \
-    git
+RUN apk --no-cache add \
+  nodejs \
+  npm \
+  ffmpeg \
+  && npm install -g \
+  npm@latest \
+  firefox-esr \
+  chromium \
+  git \
+  # Clean up obsolete files:
+  && rm -rf \
+  /tmp/* \
+  /root/.npm
 
 RUN npm install -g @wdio/cli
-
