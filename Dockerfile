@@ -1,18 +1,11 @@
-FROM alpine:3.12
+FROM blueimp/wdio
 
 RUN apk --no-cache add \
-  nodejs \
-  npm \
-  ffmpeg \
-   firefox-esr \
+  firefox-esr \
   chromium \
-  git \
-  udev \
-  ttf-freefont \
-  chromium-chromedriver 
+  git
 
 RUN git --version
-RUN npm install -g npm@latest 
 
 # Clean up obsolete files:
 RUN rm -rf \
