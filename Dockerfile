@@ -1,5 +1,7 @@
 FROM blueimp/wdio
 
+USER root
+
 RUN apk --no-cache add \
   firefox-esr \
   chromium \
