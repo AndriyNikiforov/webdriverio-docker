@@ -8,9 +8,10 @@ RUN apk --no-cache add \
   npm@latest \
   firefox-esr \
   chromium \
-  git \
+  git
+  
   # Clean up obsolete files:
-  && rm -rf \
+RUN rm -rf \
   /tmp/* \
   /root/.npm
 
