@@ -6,11 +6,11 @@ RUN apk --no-cache add \
   ffmpeg \
    firefox-esr \
   chromium \
-  git \
-  && npm install -g \
-  npm@latest 
+  git 
 
-  # Clean up obsolete files:
+RUN npm install -g npm@latest 
+
+# Clean up obsolete files:
 RUN rm -rf \
   /tmp/* \
   /root/.npm
