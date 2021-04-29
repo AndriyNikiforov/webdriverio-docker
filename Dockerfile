@@ -5,7 +5,11 @@ USER root
 RUN apk --no-cache add \
   firefox-esr \
   chromium \
-  git
+  git \
+  unzip \
+  fontconfig \
+  xvfb \
+  imagemagick
 
 RUN git --version
 
