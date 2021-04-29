@@ -6,7 +6,10 @@ RUN apk --no-cache add \
   ffmpeg \
    firefox-esr \
   chromium \
-  git 
+  git \
+  udev \
+  ttf-freefont \
+  chromium-chromedriver 
 
 RUN git --version
 RUN npm install -g npm@latest 
