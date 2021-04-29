@@ -8,6 +8,7 @@ RUN apk --no-cache add \
   chromium \
   git 
 
+RUN git --version
 RUN npm install -g npm@latest 
 
 # Clean up obsolete files:
